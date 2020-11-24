@@ -7,3 +7,7 @@ const search = function(){
     })
 }
 
+$("#recipes").on("click", ".img", function(){
+    alert($(this).data().ingredient)
+})
+

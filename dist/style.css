@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(177, 128, 128);
+}
+#recipes {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  margin: 10px;
+
+}
+#header{
+    height: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+}
+.recipe {
+  display: grid;
+  background-color: rgb(241, 181, 69);
+  text-align: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 10px;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+ul{
+    column-count: 3;
+    text-align: left;
+}
+a{
+    font-weight: bold;
+    font-size: large;
+}
+button{
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow:inset 0px 0px 18px 9px #9dadab;
+}
