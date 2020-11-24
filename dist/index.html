@@ -9,13 +9,33 @@
     <title>Document</title>
 </head>
 <body>
+
+  <div id="header">
+    <input type="text" name="search" id="recipeInput">
+    <button id="search" onclick="search()">Search</button>
+  </div>
+  <div id="recipes"></div>
     
-    <script id="change-template" type="text/x-handlebars-template">
-        
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+        <div class="recipe">
+          <div class="title"><a href="{{href}}">{{title}}</a></div>
+          <img src="{{thumbnail}}" alt="recipe photo" data-ingredient ="{{ingredients.[0]}}">
+          <div class="ingredients">
+            <h3>ingredients</h3>
+            <ul>
+              {{#each ingredients}}
+              <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        {{/each}}
       </script>
 
       <script src="./jquery/dist/jquery.js"></script>
       <script src="./handlebars/dist/handlebars.js"></script>
+      <script src="Renderer.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
